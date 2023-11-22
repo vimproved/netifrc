@@ -251,6 +251,7 @@ _which()
 # Like _which, but also consider shell builtins, and multiple alternatives
 _program_available()
 {
+	local PATH="${PATH}:/usr/libexec"
 	[ -z "$1" ] && return 0
 	local x=
 	for x; do
